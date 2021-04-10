@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteCond %{DOCUMENT_ROOT}/frontend/$1 -f
+RewriteCond $0 !^api/
+RewriteRule ^(.*)$  /frontend/$1  [L,QSA,END]
